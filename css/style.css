@@ -109,6 +109,10 @@
 .ex-10-icon {
     font-size: 60px;
     /* transition: transform 3s linear; */
+   
+}
+
+.ex-10-icon:hover{
     animation-name: loading;
     animation-duration: 3s;
     animation-iteration-count: infinite;
