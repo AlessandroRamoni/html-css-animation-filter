@@ -86,6 +86,12 @@
 }
 /* SETTIMO ESERCIZIO */
 
+.ex-8-img:hover{
+    border-radius: 30px;
+    transform: rotate(30deg);
+    filter: sepia(75%);
+}
+/* OTTAVO ESERCIZIO */
 
 .ex-9-img {
     margin: 50px 100px;
