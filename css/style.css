@@ -126,6 +126,24 @@
 }
 /* DECIMO ESERCIZIO */
 
+.ex-11-icon:hover{
+    animation-name: reverse;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+
+}
+
+@keyframes reverse {
+    25%{transform: rotate(90deg);}
+    50%{transform: rotate(180deg);}
+    75%{transform: rotate(270deg);}
+    100%{transform: rotate(0deg);}
+    
+}
+/* UNDICESIMO ESERCIZIO */
+
 .ex-11-icon {
     font-size: 60px;
 }
