@@ -2,7 +2,7 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
-    transition: background-color 5s ease-in;
+    transition: background-color 3s ease-in;
 }
 
 .ex-1-square:hover{
@@ -14,12 +14,13 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: width 5s linear;
+    transition: 3s linear;
 }
 
 .ex-2-square:active{
     background-color: blue;
     width: 100%;
+    height: 300px;
 }
 /* SECONDO ESERCIZIO */
 
@@ -28,12 +29,11 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: border-radius 3s linear;
+    transition: 2s linear;
 }
 
 .ex-3-square:hover{
     border-radius: 50%;
-
 }
 /* TERZO ESERCIZIO  */
 
@@ -42,8 +42,8 @@
     width: 100px;
     height: 100px;
     background: red;
-    opacity: 1;
-    transition: opacity 3s linear;
+    /* opacity: 1; */
+    transition: 3s linear;
 }
 
 .ex-4-square:hover{
@@ -57,11 +57,12 @@
     height: 60px;
     background: red;
     /* scale: (1); */
-    transition: transform 2s linear; 
+    transition: 2s linear; 
 }
 
 .ex-5-square:hover{
     transform: scale(1.5);
+    border-radius: 50%;
 }
 
 .ex-5-square:active{
@@ -72,6 +73,7 @@
 
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+    transition: 2s linear;
 }
 
 .ex-6-img:hover{
@@ -117,6 +119,7 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    /* animation-direction: alternate-reverse; */
 }
 
 @keyframes loading {
@@ -128,7 +131,7 @@
 
 .ex-11-icon:hover{
     animation-name: reverse;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: normal;
@@ -147,6 +150,9 @@
 .ex-11-icon {
     font-size: 60px;
 }
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -160,11 +166,46 @@
     text-align: center;
     text-decoration: none;
 }
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: muoviti 2s linear;
+}
+
+@keyframes muoviti {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: muovitigiu 2s linear;
+}
+@keyframes muovitigiu {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+/* DODICESIMO ESERCIZIO */
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
     left: 10%;
-    background: #f5f5f5;
+    background: white;
     width: 60px;
     height: 20px;
 }
@@ -172,7 +213,70 @@
     position: absolute;
     bottom: -10px;
     right: 20%;
-    background: #f5f5f5;
+    background: white;
     width: 60px;
     height: 20px;
 }
+
+/* TREDICESIMO ESERCIZIO */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: muovisopra 4s linear infinite;
+}
+@keyframes muovisopra {
+    0% {
+        /* è il punto di partenza */
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(90% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(90% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: -10px;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: muovisotto 4s linear infinite;
+}
+@keyframes muovisotto {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
